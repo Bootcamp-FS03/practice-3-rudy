@@ -1,0 +1,17 @@
+<div class="post">
+    <div class="post-header">
+      <img [src]="authorAvatar" alt="Author Avatar" class="avatar" />
+      <div class="author-info">
+        <h3>{{ authorName }}</h3>
+        <p>{{ postTime | date: 'medium' }}</p>
+      </div>
+    </div>
+    <div class="post-content">
+      <p>{{ postText }}</p>
+    </div>
+    <div class="post-actions">
+      <button (click)="likePost()">Like</button>
+      <button (click)="commentPost()">Comment</button>
+      <button (click)="sharePost()">Share</button>
+    </div>
+  </div>

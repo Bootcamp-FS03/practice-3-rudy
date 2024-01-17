@@ -1,0 +1,8 @@
+<div *ngFor="let post of posts">
+  <app-post
+    [authorAvatar]="post.owner.profilePicture"
+    [authorName]="post.owner.username"
+    [postTime]="post.postedAt"
+    [postText]="post.description"
+  ></app-post>
+</div>

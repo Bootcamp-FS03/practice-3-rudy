@@ -1,0 +1,40 @@
+<div class="register-container">
+    <h2>Register</h2>
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+      <div>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" formControlName="username" />
+        <div *ngIf="registerForm.get('username')?.hasError('required')">
+          Username is required.
+        </div>
+        <div *ngIf="registerForm.get('username')?.hasError('minlength')">
+          Username must be at least 3 characters.
+        </div>
+      </div>
+  
+      <div>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" formControlName="email" />
+        <div *ngIf="registerForm.get('email')?.hasError('required')">
+          Email is required.
+        </div>
+        <div *ngIf="registerForm.get('email')?.hasError('email')">
+          Enter a valid email address.
+        </div>
+      </div>
+  
+      <div>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" formControlName="password" />
+        <div *ngIf="registerForm.get('password')?.hasError('required')">
+          Password is required.
+        </div>
+        <div *ngIf="registerForm.get('password')?.hasError('minlength')">
+          Password must be at least 6 characters.
+        </div>
+      </div>
+  
+      <button type="submit">Register</button>
+    </form>
+  </div>
+  

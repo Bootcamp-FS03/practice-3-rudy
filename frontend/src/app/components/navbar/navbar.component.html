@@ -1,0 +1,8 @@
+<div class="navbar">
+    <a class="logo" href="/home">SocialAppLogo</a>
+  <div class="navbar-content" *ngIf="authService.isAuthenticated()">
+    <a routerLink="/">Dashboard</a>
+    <a routerLink="/profile">Profile</a>
+    <button class="logout-button" (click)="authService.logout()">Logout</button>
+  </div>
+</div>

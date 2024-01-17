@@ -1,0 +1,12 @@
+{
+  "hosting": {
+    "public": "dist/practice-3-rudy",
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}
